@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'header';
+@import 'sider';
+
+.position {
+  &__relative {
+    position: relative;
+  }
+}
+
+.main {
+  display: flex;
+}
