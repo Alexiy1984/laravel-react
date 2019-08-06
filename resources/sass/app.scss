@@ -9,6 +9,8 @@
 
 @import 'header';
 @import 'sider';
+@import 'content';
+@import 'footer';
 
 .position {
   &__relative {
@@ -16,6 +18,17 @@
   }
 }
 
+#root {
+  // position: sticky;
+}
+
 .main {
   display: flex;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
+  }
 }

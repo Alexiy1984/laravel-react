@@ -17,5 +17,8 @@
         @include('partials.header')
         <div id="root"></div>
         <script src="{{mix('js/app.js')}}" ></script>
+        <div class="footer">
+          
+        </div>
     </body>
 </html>

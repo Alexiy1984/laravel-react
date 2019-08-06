@@ -9,12 +9,17 @@ class Main extends Component {
     
     this.state = {
         products: [],
-        currentProduct: null
+        currentProduct: null,
+        hoveredProduct: null
     }
   }
 
   handleClick(product) {
     this.setState({currentProduct:product});
+  }
+
+  handleHovered(product) {
+    this.setState({hoveredProduct:product.id});
   }
   
   componentDidMount() {
@@ -30,7 +35,7 @@ class Main extends Component {
  renderProducts() {
     return this.state.products.map(product => {
         return (
-            <li onClick={() =>this.handleClick(product)} key={product.id} >
+            <li onClick={() =>this.handleClick(product)} onMouseMove={() =>this.handleHovered(product)} key={product.id} >
                 { product.id } { product.title }
             </li>      
         );

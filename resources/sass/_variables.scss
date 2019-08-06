@@ -17,3 +17,9 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$main-color: #880551;
+$hg-text-color: rgba($main-color, 0.5);
+$hg-background-color: rgba($main-color, 0.075);
+// $secondary-color: complement($main-color);
+$secondary-color: #261da5;

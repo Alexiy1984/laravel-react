@@ -11102,10 +11102,8 @@ a.text-dark:focus {
 
 .header {
   padding: 2rem 3rem;
-  background-color: #925b08;
+  background-color: #880551;
   color: #fff;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   margin-bottom: 1rem;
 }
@@ -11121,12 +11119,13 @@ a.text-dark:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  background-color: #2678f3;
+  background-color: #675fe3;
   padding: 1rem;
   border-radius: 0.5rem;
   width: 20%;
   min-width: 20%;
   margin: 0 1rem;
+  color: #fff;
 }
 
 .sider ul {
@@ -11136,19 +11135,66 @@ a.text-dark:focus {
 
 .sider li {
   border-bottom: 1px solid transparent;
+  color: #fff;
 }
 
 .sider li:hover {
   cursor: pointer;
-  border-bottom-color: rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.075);
+  border-bottom-color: rgba(136, 5, 81, 0.5);
+  color: rgba(136, 5, 81, 0.5);
+  background-color: rgba(136, 5, 81, 0.075);
 }
 
 @media (max-width: 1200px) {
   .sider {
     width: calc(40vw - 1rem);
+    min-width: calc(40vw - 1rem);
   }
+}
+
+@media (max-width: 1200px) {
+  .sider {
+    width: calc(40% - 1rem);
+    min-width: calc(40% - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .sider {
+    width: calc(100% - 2rem);
+    min-width: calc(100% - 2rem);
+  }
+}
+
+.content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  padding: 1rem;
+  background-color: #a5a0ee;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin: 1rem 0 0 1rem;
+    width: calc(100% - 2rem);
+    min-width: calc(100% - 2rem);
+  }
+}
+
+.footer {
+  background-color: #3e0225;
+  min-height: 5rem;
 }
 
 .position__relative {
@@ -11158,5 +11204,14 @@ a.text-dark:focus {
 .main {
   display: -webkit-box;
   display: flex;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
 }
 

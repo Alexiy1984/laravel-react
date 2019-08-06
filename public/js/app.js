@@ -61712,7 +61712,8 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Main).call(this));
     _this.state = {
       products: [],
-      currentProduct: null
+      currentProduct: null,
+      hoveredProduct: null
     };
     return _this;
   }
@@ -61792,26 +61793,17 @@ __webpack_require__.r(__webpack_exports__);
 
 var Product = function Product(_ref) {
   var product = _ref.product;
-  var divStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    flexGrow: '1',
-    padding: '1rem',
-    backgroundColor: '#777',
-    borderRadius: '0.5rem',
-    marginLeft: '1rem' //if the props product is null, return Product doesn't exist
 
-  };
-
+  //if the props product is null, return Product doesn't exist
   if (!product) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: divStyle
-    }, "  Product Doesnt exist ");
+      className: "content"
+    }, "  Product Doesnt exist");
   } //Else, display the product data
 
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: divStyle
+    className: "content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " ", product.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ", product.description, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " Status ", product.availability ? 'Available' : 'Out of stock', " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " Price : ", product.price, " "));
 };
 
